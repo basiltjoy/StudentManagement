@@ -1,0 +1,13 @@
+<div class="editStudent">
+        <input type="text" placeholder="student name" [(ngModel)]="inputID">
+</div>
+
+<textarea name="" id="" cols="20" rows="1" (change)="onChangeEvent($event)">{{stud.sname}}</textarea>
+<textarea name="" id="" cols="20" rows="1" (change)="onChangeEvent2($event)">{{stud.scourse}}</textarea>
+
+<div>
+    <a href="" routerLink="/view">
+        <button class="btn btn-outline-danger">Go Back</button>
+    </a>
+    <button class="btn btn-outline-dark" (click)="fetchStudent()">Find Student</button>
+</div>

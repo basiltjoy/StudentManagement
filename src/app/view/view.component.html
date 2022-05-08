@@ -1,0 +1,39 @@
+<div class="view">
+    <div>
+        <h3>Display Student Details</h3>
+        <div class="studentView">
+            <input type="text" placeholder="student id" [(ngModel)]="inputID">
+        </div>
+
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Student Name</th>
+                        <th>Student Course</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{mappedID.sid}} </td>
+                        <td>{{mappedID.sname | uppercase}} </td>
+                        <td>{{mappedID.scourse | uppercase}} </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <br>
+    <div class="buttons">
+        <button type="submit" class="btn btn-outline-success" (click)="displayDetails()">View student</button>
+        <a routerLink="/edit">
+            <button type="submit" class="btn btn-outline-warning">Edit student</button>
+        </a>
+        <a href="" routerLink="/">
+            <button class="btn btn-outline-primary">Go Back</button>
+        </a>
+    </div>
+</div>

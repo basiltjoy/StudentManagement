@@ -1,0 +1,54 @@
+
+input{
+    margin-top: 40px;
+    margin-left: 350px;
+    width: 42.5%;
+    color: black
+}
+
+.btn-outline-primary{
+    margin-left: 45.5%
+}
+
+::placeholder{
+text-align: center;
+}
+
+
+table, td, th {  
+    border: 2px solid rgb(255, 248, 248);
+    text-align: center;
+    margin-left: 10%;
+    font-weight: bolder;
+}
+  
+table {
+    border-collapse: collapse;
+    width: 80%;
+}
+  
+th, td {
+    padding: 15px;
+}  
+
+.studentView{
+    background-repeat: no-repeat;
+    height: 120px;   
+    background-image: linear-gradient(rgba(0, 0, 255, 0.5),rgba(255, 255, 0, 0.5)), url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkGUTDG6qNH8Ar0rNpmoUExanDvV1TJ9jr1g&usqp=CAU");  
+    background-position: center;
+}
+
+h3{
+    text-align: center;
+    font-weight: bolder;
+    
+}
+
+.view{
+    margin-top: -5%;
+    background-color: #5a5c5c;
+}
+.buttons{
+    margin-left: 40%;
+    padding-bottom: 1%;
+}
