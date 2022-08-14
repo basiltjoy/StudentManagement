@@ -9,7 +9,7 @@ import { DatabaseService } from '../database.service';
 })
 export class EditComponent implements OnInit {
 
-  inputID: string = ""
+  inputName: string = ""
   stud:any = []
   abc:any;
   nameChanged: string = ""
@@ -21,11 +21,12 @@ export class EditComponent implements OnInit {
   }
 
   fetchStudent() {
-   if(this.stud = (this.ds.db.find(item => item.sname == this.inputID)) ){
+   if(this.stud = (this.ds.db.find(item => item.sname == this.inputName)) ){
       alert("Student Found")
     }
     else{
       alert("Student not Found")
+      this.inputName=''
     }
   }
 
