@@ -71,7 +71,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"editStudent\">\n        <input type=\"text\" placeholder=\"student name\" [(ngModel)]=\"inputID\">\n</div>\n\n<textarea name=\"\" id=\"\" cols=\"20\" rows=\"1\" (change)=\"onChangeEvent($event)\">{{stud.sname}}</textarea>\n<textarea name=\"\" id=\"\" cols=\"20\" rows=\"1\" (change)=\"onChangeEvent2($event)\">{{stud.scourse}}</textarea>\n\n<div>\n    <a href=\"\" routerLink=\"/view\">\n        <button class=\"btn btn-outline-danger\">Go Back</button>\n    </a>\n    <button class=\"btn btn-outline-dark\" (click)=\"fetchStudent()\">Find Student</button>\n</div>";
+    __webpack_exports__["default"] = "<div class=\"editStudent\">\n        <input type=\"text\" placeholder=\"student name\" [(ngModel)]=\"inputName\">\n</div>\n\n<textarea name=\"\" id=\"\" cols=\"20\" rows=\"1\" (change)=\"onChangeEvent($event)\">{{stud.sname}}</textarea>\n<textarea name=\"\" id=\"\" cols=\"20\" rows=\"1\" (change)=\"onChangeEvent2($event)\">{{stud.scourse}}</textarea>\n\n<div>\n    <a href=\"\" routerLink=\"/view\">\n        <button class=\"btn btn-outline-danger\">Go Back</button>\n    </a>\n    <button class=\"btn btn-outline-dark\" (click)=\"fetchStudent()\">Find Student</button>\n</div>";
     /***/
   },
 
@@ -111,7 +111,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"view\">\n    <div>\n        <h3>Display Student Details</h3>\n        <div class=\"studentView\">\n            <input type=\"text\" placeholder=\"student id\" [(ngModel)]=\"inputID\">\n        </div>\n\n        <div>\n            <table>\n                <thead>\n                    <tr>\n                        <th>Student ID</th>\n                        <th>Student Name</th>\n                        <th>Student Course</th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr>\n                        <td>{{mappedID.sid}} </td>\n                        <td>{{mappedID.sname | uppercase}} </td>\n                        <td>{{mappedID.scourse | uppercase}} </td>\n                    </tr>\n\n                </tbody>\n            </table>\n        </div>\n    </div>\n\n    <br>\n    <div class=\"buttons\">\n        <button type=\"submit\" class=\"btn btn-outline-success\" (click)=\"displayDetails()\">View student</button>\n        <a routerLink=\"/edit\">\n            <button type=\"submit\" class=\"btn btn-outline-warning\">Edit student</button>\n        </a>\n        <a href=\"\" routerLink=\"/\">\n            <button class=\"btn btn-outline-primary\">Go Back</button>\n        </a>\n    </div>\n</div>";
+    __webpack_exports__["default"] = "<div class=\"view\">\n    <div>\n        <h3>Display Student Details</h3>\n        <div class=\"studentView\">\n            <input type=\"text\" placeholder=\"student id\" [(ngModel)]=\"inputID\">\n        </div>\n\n        <div>\n            <table>\n                <thead>\n                    <tr>\n                        <th>Student ID</th>\n                        <th>Student Name</th>\n                        <th>Student Course</th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr>\n                        <td>{{mappedID.sid}} </td>\n                        <td>{{mappedID.sname | uppercase}} </td>\n                        <td>{{mappedID.scourse | uppercase}} </td>\n                    </tr>\n\n                </tbody>\n            </table>\n        </div>\n    </div>\n\n    <br>\n    <div class=\"buttons\">\n        <button type=\"submit\" class=\"btn btn-outline-success\" (click)=\"displayDetails()\">View student</button>\n        <a routerLink=\"/edit\">\n            <button type=\"submit\" class=\"btn btn-outline-warning\" style=\"margin-left: 5px;\">Edit student</button>\n        </a>\n        <a href=\"\" routerLink=\"/\">\n            <button class=\"btn btn-outline-primary\">Go Back</button>\n        </a>\n    </div>\n</div>";
     /***/
   },
 
@@ -1085,7 +1085,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _classCallCheck(this, EditComponent);
 
         this.ds = ds;
-        this.inputID = "";
+        this.inputName = "";
         this.stud = [];
         this.nameChanged = "";
       }
@@ -1099,11 +1099,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _this = this;
 
           if (this.stud = this.ds.db.find(function (item) {
-            return item.sname == _this.inputID;
+            return item.sname == _this.inputName;
           })) {
             alert("Student Found");
           } else {
             alert("Student not Found");
+            this.inputName = '';
           }
         }
       }, {
@@ -1353,8 +1354,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           });
 
           if (this.mappedID) {} else {
-            alert("Match not found");
-            location.reload();
+            alert("Match not found"); // location.reload();
+
+            this.inputID = '';
           }
         }
       }]);
