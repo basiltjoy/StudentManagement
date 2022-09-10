@@ -25,12 +25,15 @@ export class RegisterComponent implements OnInit {
       alert("Already registered student")
     }
     else {
-      let sid = this.inputID
-      let sname = this.inputName
-      let scourse = this.inputCourse
-      this.ds.db.push({ sid, sname, scourse })
+      let sid = this.inputID;
+      let sname = this.inputName;
+      let scourse = this.inputCourse;
+      this.ds.db.push({ sid, sname, scourse });
       console.log(this.ds.db);
       alert("Student added")
+      this.inputID='';
+      this.inputName= ''; 
+      this.inputCourse ='';
     }
   }
 

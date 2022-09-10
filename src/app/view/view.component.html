@@ -1,17 +1,20 @@
-<div class="view">
-    <div>
-        <h3>Display Student Details</h3>
+<div class="view container">
+    <div class="container">
         <div class="studentView">
-            <input type="text" placeholder="student id" [(ngModel)]="inputID">
+            <h3>Student Details</h3>
+            <div class="row col-md-15 d-flex">
+                <label class="control-label col-sm-3"></label>
+                <input type="text" class="mx-5" placeholder="student name" [(ngModel)]="inputID">
+            </div>
         </div>
 
-        <div>
-            <table>
+        <div class="table-responsive">
+            <table class="table">
                 <thead>
                     <tr>
-                        <th>Student ID</th>
-                        <th>Student Name</th>
-                        <th>Student Course</th>
+                        <th scope="col">Student ID</th>
+                        <th scope="col">Student Name</th>
+                        <th scope="col">Student Course</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -20,20 +23,20 @@
                         <td>{{mappedID.sname | uppercase}} </td>
                         <td>{{mappedID.scourse | uppercase}} </td>
                     </tr>
-
                 </tbody>
             </table>
         </div>
+
     </div>
 
     <br>
     <div class="buttons">
-        <button type="submit" class="btn btn-outline-success" (click)="displayDetails()">View student</button>
-        <a routerLink="/edit">
-            <button type="submit" class="btn btn-outline-warning" style="margin-left: 8px;">Edit student</button>
+        <button type="submit" scope="col" class="btn btn-outline-light" (click)="displayDetails()">View student</button>
+        <a routerLink="/edit" class="mx-2">
+            <button type="submit" scope="col" class="btn btn-outline-warning">Edit student</button>
         </a>
         <a href="" routerLink="/">
-            <button class="btn btn-outline-primary">Go Back</button>
+            <button class="btn btn-outline-primary" scope="col">Go Back</button>
         </a>
     </div>
 </div>

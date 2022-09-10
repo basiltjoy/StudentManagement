@@ -9,37 +9,44 @@ import { DatabaseService } from '../database.service';
 })
 export class EditComponent implements OnInit {
 
-  inputName: string = ""
-  stud:any = []
-  abc:any;
+  inputID: string = ""
+  stud: any = []
+  abc: any;
   nameChanged: string = ""
 
-  constructor(private ds: DatabaseService) {  
+  constructor(private ds: DatabaseService) {
   }
 
   ngOnInit() {
   }
 
   fetchStudent() {
-   if(this.stud = (this.ds.db.find(item => item.sname == this.inputName)) ){
-      alert("Student Found")
+    if (this.stud = (this.ds.db.find(item => item.sname == this.inputID))) {
+      alert("Student Found, Proceed with modifications, they'll be saved automatically")
     }
-    else{
+    else {
       alert("Student not Found")
-      this.inputName=''
+      this.inputID = '';
+      this.stud = '';
     }
   }
 
   onChangeEvent(event: any) {
     let nameChanged = event.target.value
-    this.stud.sname=nameChanged  
-  } 
-  
-  onChangeEvent2(event:any){
-    let courseChanged = event.target.value
-    this.stud.scourse=courseChanged
+    this.stud.sname = nameChanged
+    if(event){
+      alert('Student Name change saved')
+    }
   }
-  
 
-  
+  onChangeEvent2(event: any) {
+    let courseChanged = event.target.value
+    this.stud.scourse = courseChanged
+    if(event){
+      alert('Student course change saved')
+    }
+  }
+
+
+
 }

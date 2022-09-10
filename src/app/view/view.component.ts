@@ -20,13 +20,12 @@ export class ViewComponent implements OnInit {
   }
 
   displayDetails() {
-    this.mappedID = this.ds.db.find(id =>id.sid== this.inputID);
+    this.mappedID = this.ds.db.find(id =>id.sname== this.inputID);
     if(this.mappedID){
     }
     else{
       alert("Match not found")
-      // location.reload();
-      this.inputID=''
+      location.reload();
     }
   }
 

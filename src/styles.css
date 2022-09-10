@@ -4,4 +4,6 @@ html,body {
     background-size:cover; width:auto; height: 45em;
     background-position:50% 50%; 
     margin-top: 1%;
+    /* background-size: cover; */
+background-repeat:no-repeat;
 }
