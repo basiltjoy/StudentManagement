@@ -1,17 +1,28 @@
-<div class="editStudent">
-    <input type="text" placeholder="student name" [(ngModel)]="inputID"
-    data-toggle="tooltip" data-placement="left" title="Enter student name as provided">
+<div class="container">
+    <div class="row">
+        <div class="student col-lg-4 col-md-12">
+            <div class="editStudent">
+                <input type="text" placeholder="student name" [(ngModel)]="inputID" data-toggle="tooltip"
+                    data-placement="left" title="Enter student name as provided">
+            </div>
+
+
+
+            <textarea name="" id="" cols="20" rows="1" (change)="onChangeEvent($event)">{{stud.sname}}</textarea>
+            <textarea name="" id="" cols="20" rows="1" (change)="onChangeEvent2($event)">{{stud.scourse}}</textarea>
+
+            <div class="row mx-5">
+                <div class="text-center">
+                    <div class="btn-group mt-2 mx-5">
+                        <a href="" routerLink="/view">
+                            <button type="button" class="btn btn-danger">Go Back</button>
+                        </a>
+                        <button type="button" class="btn btn-dark" (click)="fetchStudent()">
+                            Find Student</button>
+                        <button type="button" class="btn btn-warning" (click)="clear()">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-
-
-
-<textarea name="" id="" cols="20" rows="1" (change)="onChangeEvent($event)">{{stud.sname}}</textarea>
-<textarea name="" id="" cols="20" rows="1" (change)="onChangeEvent2($event)">{{stud.scourse}}</textarea>
-
-<div>
-    <a href="" routerLink="/view">
-        <button class="btn btn-outline-danger">Go Back</button>
-    </a>
-    <button class="btn btn-outline-dark" (click)="fetchStudent()">Find Student</button>
-</div>
-

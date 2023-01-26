@@ -47,6 +47,9 @@ export class EditComponent implements OnInit {
     }
   }
 
-
+  clear(){
+    this.inputID=''
+    this.stud=''
+  }
 
 }
