@@ -25,7 +25,8 @@ export class ViewComponent implements OnInit {
     }
     else{
       alert("Match not found")
-      location.reload();
+      this.inputID=''
+      this.mappedID=''
     }
   }
 

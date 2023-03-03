@@ -1,5 +1,6 @@
 import { splitNsName } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import { Alert } from 'selenium-webdriver';
 import { DatabaseService } from '../database.service';
 
 @Component({
@@ -11,13 +12,14 @@ export class EditComponent implements OnInit {
 
   inputID: string = ""
   stud: any = []
-  abc: any;
-  nameChanged: string = ""
+  searchValue: any;
+
 
   constructor(private ds: DatabaseService) {
+    this.searchValue = null;
   }
 
-  ngOnInit() {
+  ngOnInit() {  
   }
 
   fetchStudent() {
@@ -32,9 +34,11 @@ export class EditComponent implements OnInit {
   }
 
   onChangeEvent(event: any) {
-    let nameChanged = event.target.value
-    this.stud.sname = nameChanged
-    if(event){
+    this.searchValue = event.target.value
+    console.log(this.searchValue);
+
+    this.stud.sname = this.searchValue
+    if (event) {
       alert('Student Name change saved')
     }
   }
@@ -42,14 +46,27 @@ export class EditComponent implements OnInit {
   onChangeEvent2(event: any) {
     let courseChanged = event.target.value
     this.stud.scourse = courseChanged
-    if(event){
+    if (event) {
       alert('Student course change saved')
     }
   }
 
-  clear(){
-    this.inputID=''
-    this.stud=''
+  EntryNull(event){
+    if(this.inputID==''){
+      alert('ss')
+      this.stud=''
+    }
   }
+
+  clear(){
+    this.stud=''
+    this.inputID = '';
+  }
+
+
+
+
+
+
 
 }
