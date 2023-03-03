@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class DatabaseService {
 
   db=[
-    {sid:100,sname:'akhil',scourse:'bca'},
+    {sid:100,sname:'akhil',scourse:'mca'},
     {sid:101,sname:'ashik',scourse:'bca'},
     {sid:102,sname:'ashika',scourse:'bsc'},
   ]
