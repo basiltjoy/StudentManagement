@@ -21,6 +21,10 @@ export class RegisterComponent implements OnInit {
   }
 
   register() {
+    if(this.inputID=='' ||this.inputName==''){
+      alert("Student details not provided!")
+      return
+    }
     if (this.ds.db.find(({ sid }) => sid === this.inputID)) {
       alert("Already registered student")
     }
