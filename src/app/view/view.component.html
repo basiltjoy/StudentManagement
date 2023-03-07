@@ -2,9 +2,9 @@
     <div class="container">
         <div class="studentView">
             <h3>Student Details</h3>
-            <div class="row col-md-15 d-flex">
-                <label class="control-label col-sm-3"></label>
-                <input type="text" class="mx-5" placeholder="student name" [(ngModel)]="inputID">
+            <div class="row  d-flex">
+                <!-- <input type="text"  class="mx-5" placeholder="student name" [(ngModel)]="inputID"> -->
+                <input type="text" placeholder="student name" [(ngModel)]="inputID" class="center-block">
             </div>
         </div>
 
@@ -30,13 +30,18 @@
     </div>
 
     <br>
-    <div class="buttons">
-        <button type="submit" scope="col" class="btn btn-outline-light" (click)="displayDetails()">View student</button>
-        <a routerLink="/edit" class="mx-2">
+    <div class='container'>
+        <button type="submit" id="btn1" scope="col" class="btn btn-outline-light" (click)="displayDetails()">View
+            student</button>
+
+        <a routerLink="/edit" class="mx-2 text-center">
             <button type="submit" scope="col" class="btn btn-outline-warning">Edit student</button>
         </a>
+
         <a href="" routerLink="/">
-            <button class="btn btn-outline-primary mt-1" scope="col">Go Back</button>
+            <button class="btn btn-outline-primary" id="btn3" scope="col">Go Back</button>
         </a>
     </div>
+    <br>
+
 </div>

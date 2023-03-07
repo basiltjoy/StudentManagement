@@ -6,14 +6,9 @@ input{
     color: black;
 }
 
-.btn-outline-primary{
-    margin-left: 45.5%
-}
-
 ::placeholder{
 text-align: center;
 }
-
 
 table, td, th {  
     border: 2px solid rgb(255, 248, 248);
@@ -33,10 +28,9 @@ th, td {
 
 .studentView{
     background-repeat: no-repeat;
-    height: 120px;   
-    background-image: linear-gradient(rgba(0, 0, 255, 0.5),rgba(255, 255, 0, 0.5)), url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkGUTDG6qNH8Ar0rNpmoUExanDvV1TJ9jr1g&usqp=CAU");  
+    height: 190px;
+    background-image: linear-gradient(rgba(0, 0, 255, 0.5),rgba(255, 255, 0, 0.5)), url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkGUTDG6qNH8Ar0rNpmoUExanDvV1TJ9jr1g&usqp=CAU);
     background-position: center;
-    margin-top: 62px;
 }
 
 h3{
@@ -53,3 +47,22 @@ h3{
     margin-left: 40%;
     padding-bottom: 1%;
 }
+
+.container{
+    width: 100%;
+    text-align: center;
+}
+.container button{
+    display: inline-block;
+}
+#btn1{
+    float:left;
+}
+#btn3{
+    float:right;
+}
+
+.center-block {
+    margin: auto;
+    display: block;
+  }

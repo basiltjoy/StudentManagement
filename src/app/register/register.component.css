@@ -54,3 +54,7 @@ p{
     font-style: italic;
     font-size: large;
 }
+
+.container{
+    float: left;
+}
