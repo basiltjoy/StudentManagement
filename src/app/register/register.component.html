@@ -1,7 +1,11 @@
 <div class="section" id="projects">
     <div class="container">
         <span class="content-title mb-4"></span>
-        <h1>Student Management</h1>
+        <div class="p-2 text-center bg-dark">
+            <h1 style="color:cornsilk;">Student Management</h1>
+
+        </div>
+
         <div class="card">
             <p>{{title}}</p>
             <div class="col-lg-10">
@@ -9,19 +13,19 @@
                     <div class="card Sdetails ">
                         <div class="row mb-3 mx-5 mt-2">
                             <div class="col-md-15 mx-5">
-                                <input type="number" placeholder="id" [(ngModel)]="inputID"  class="form-control" 
+                                <input type="number" placeholder="id" [(ngModel)]="inputID" class="form-control"
                                     style="text-transform: uppercase;">
                             </div>
                         </div>
                         <div class="row mb-3 mx-5">
                             <div class="col-sm-15 mx-5">
-                                <input type="text" placeholder="name" [(ngModel)]="inputName"  class="form-control" 
+                                <input type="text" placeholder="name" [(ngModel)]="inputName" class="form-control"
                                     style="text-transform: uppercase;">
                             </div>
                         </div>
                         <div class="row mb-3 mx-5">
                             <div class="col-sm-15 mx-5">
-                                <input type="text" placeholder="course" [(ngModel)]="inputCourse"  class="form-control" 
+                                <input type="text" placeholder="course" [(ngModel)]="inputCourse" class="form-control"
                                     style="text-transform: uppercase;">
                             </div>
                         </div>
@@ -44,7 +48,7 @@
                         <button class="btn btn-link mx-1" (click)="reset()">Reset</button>
                     </div>
                 </div>
-               
+
             </div>
 
         </div>

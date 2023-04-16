@@ -1,31 +1,32 @@
-<div class="container">
+<div class="container ">
     <div class="row">
-        <div class="student col-lg-4 col-md-12">
-            <div class="editStudent">
+        <div class="col-md-3">
+            <div class="form-outline mb-5">
                 <input type="text" placeholder="student name" [(ngModel)]="inputID" data-toggle="tooltip"
-                    data-placement="left" title="Enter student name as provided" 
-                    (change)="EntryNull($event)">
+                    data-placement="left" title="Enter student name as provided" (change)="EntryNull($event)"
+                    class="form-control">
             </div>
-
             <div *ngIf="inputID!='' ">
-                <textarea name="" id="" cols="20" rows="1" (change)="onChangeEvent($event)">{{stud.sname}}</textarea>
-                <textarea name="" id="" cols="20" rows="1" (change)="onChangeEvent2($event)">{{stud.scourse}}</textarea>
+                <textarea class="form-control" id="textAreaExample5" rows="1"
+                    (change)="onChangeEvent($event)">{{stud.sname}}</textarea><br>
+                <textarea class="form-control" id="textAreaExample5" rows="1"
+                    (change)="onChangeEvent2($event)">{{stud.scourse}}</textarea><br>
             </div>
+        </div>
+
+    </div>
+</div>
 
 
-            <div class="container mx-5 col-lg-13">
-                <div class="row">
-                    <div class="btn-group mt-2">
-                        <a href="" routerLink="/view">
-                            <button type="button" class="btn btn-danger">Go Back</button>
-                        </a>
-                        <button type="button" class="btn btn-dark" (click)="fetchStudent()">
-                            Find Student</button>
-                        <button type="button" class="btn btn-warning" (click)="clear()">Reset</button>
-                    </div>
-                </div>
-            </div>
-
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-4 text-right">
+            <a href="" routerLink="/view">
+                <button type="button" class="btn btn-danger">Go Back</button>
+            </a>
+            <button type="button" class="btn btn-dark mx-2" (click)="fetchStudent()">
+                Find Student</button>
+            <button type="button" class="btn btn-warning mx-2" (click)="clear()">Reset</button>
         </div>
     </div>
 </div>

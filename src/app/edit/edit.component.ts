@@ -53,7 +53,6 @@ export class EditComponent implements OnInit {
 
   EntryNull(event){
     if(this.inputID==''){
-      alert('ss')
       this.stud=''
     }
   }
